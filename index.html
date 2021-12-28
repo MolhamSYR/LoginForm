@@ -161,11 +161,9 @@
       
     <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-        <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-        <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-        <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">SKILLS</a>
-        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">WHY US</a>
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+        
     </nav>
 
       
@@ -215,5 +213,31 @@
 
 
     </script>
+
+     <script>
+       function onClick(element) {
+       document.getElementById("img01").src = element.src;
+       document.getElementById("modal01").style.display = "block";
+       var captionText = document.getElementById("caption");
+         captionText.innerHTML = element.alt;
+       }
+
+       
+       // Toggle between showing and hiding the sidebar when clicking the menu icon
+       var mySidebar = document.getElementById("mySidebar");
+
+       function w3_open() {
+         if (mySidebar.style.display === 'block') {
+           mySidebar.style.display = 'none';
+         } else {
+           mySidebar.style.display = 'block';
+         }
+       }
+
+       // Close the sidebar with the close button
+       function w3_close() {
+           mySidebar.style.display = "none";
+       }
+     </script>
 </body>
 </html>
